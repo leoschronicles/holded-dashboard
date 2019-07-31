@@ -29,7 +29,7 @@
     "autoload": {
         "psr-4": {
             "Holded\\": ["lib/"],
-            "": ["controllers/", "middlewares/", "services/", "lib/"]
+            "": ["controllers/", "middlewares/", "services/"]
         }
     },
     "config": {
