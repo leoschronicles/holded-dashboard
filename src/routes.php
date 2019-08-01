@@ -7,12 +7,6 @@ use Slim\Http\Response;
 return function (App $app) {
     $container = $app->getContainer();
 
-    // Authenticated routes
-    $app->group('/account', function() {
-        $this->get('/signout', 'AuthController:getLogOut')->setName('auth.signout');
-        $this->get('/password/change', 'PasswordController:getChangePassword')->setName('auth.password.change');
-    })->add(new AuthMiddleware($container));
-
     // Dashboard
     $app->group('/dashboard', function() {
         $this->get('', 'DashboardController:index')->setName('dashboard.index');
