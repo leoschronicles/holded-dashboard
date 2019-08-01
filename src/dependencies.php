@@ -27,8 +27,18 @@ return function (App $app) {
         return new \Slim\Flash\Messages();
     };
 
+    // MongoDB
+    // Link: https://docs.mongodb.com/php-library/current/tutorial/crud/
+    $container['mongo'] = function ($c) {
+        $dbName = $c->get('settings')['db']['name'];
+        
+        $client = new MongoDB\Client();
+        return $client->{$dbName};
+    };
+
     // auth
     $container['auth'] = function ($c) {
         return new AuthService($c);
     };
+    
 };

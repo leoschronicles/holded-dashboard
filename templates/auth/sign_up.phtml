@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Holded - Sign up</title>
+        <meta charset="utf-8"/>
+        <?php $helper->loadPartial('header'); ?>
+    </head>
+    <body data-page-name='auth:signup'>
+        <div class="container">
+            <?php $helper->loadPartial('flash_messages', [ 'flash' => $flash]); ?>
+            <h1>Sign Up</h1>
+            <form method="post" action="/account/signup">
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" />
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" />
+                </div>
+                <div class="field">
+                    <label for="password">Confirmación de password</label>
+                    <input type="password" name="password-confirmation" />
+                </div>
+                <div class="actions">
+                    <input type="submit" value="Empezar Ya">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
