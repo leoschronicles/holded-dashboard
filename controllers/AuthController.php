@@ -42,7 +42,6 @@ class AuthController extends BaseController
         $userFields = $request->getParsedBody();
 
         $username = $userFields['username'];
-        $password = $userFields['password'];
 
         if($this->auth->userExists($username)){
             $this->flash->addMessage('error', 'User already exists');
