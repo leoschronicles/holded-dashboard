@@ -107,7 +107,6 @@
 #modal-widget.modal .action.edit-btn,
 #modal-widget.modal .action.delete-btn{
     font-family: Poppins, sans-serif;
-    background: #00B143;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 13px;
@@ -115,4 +114,17 @@
     width:100%;
     border:none;
     padding:10px;
+}
+
+
+#modal-widget.modal .action.create-btn{
+    background: #00B143;
+}
+
+#modal-widget.modal .action.edit-btn{
+    background: #00B143;
+}
+
+#modal-widget.modal .action.delete-btn{
+    background: #e91e63;
 }
