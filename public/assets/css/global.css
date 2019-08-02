@@ -14,9 +14,12 @@ h2{
 .alertify-notifier.ajs-right .ajs-message.ajs-visible{
     font-family: 'Poppins', sans-serif;
     font-size:14px;
-    border:none;
 }
 
-.alertify-notifier.ajs-right .ajs-message.ajs-visible{
+.alertify-notifier .ajs-message.ajs-error{
+    border:1px solid #cf4545;
+}
+
+.alertify-notifier .ajs-message.ajs-success{
     border:1px solid #4eb02a;
 }

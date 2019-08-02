@@ -42,6 +42,18 @@ class AuthController extends BaseController
         $userFields = $request->getParsedBody();
 
         $username = $userFields['username'];
+        $password = $userFields['password'];
+        $name = $userFields['name'];
+        
+        if(empty($username) || empty($password)){
+            $this->flash->addMessage('error', 'Username and password must be provided');
+            return $response->withRedirect($this->router->pathFor('auth.signup'));
+        }
+
+        if(empty($name)){
+            $this->flash->addMessage('error', 'You must provide a name');
+            return $response->withRedirect($this->router->pathFor('auth.signup'));
+        }
 
         if($this->auth->userExists($username)){
             $this->flash->addMessage('error', 'User already exists');
