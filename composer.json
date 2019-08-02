@@ -13,6 +13,7 @@
     ],
     "require": {
         "php": ">=5.6",
+        "mongodb/mongodb": "^1.4",
         "monolog/monolog": "^1.17",
         "slim/flash": "^0.4.0",
         "slim/php-view": "^2.0",
@@ -29,7 +30,8 @@
     "autoload": {
         "psr-4": {
             "Holded\\": ["lib/"],
-            "": ["controllers/", "middlewares/", "services/", "lib/"]
+            "Api\\v1\\": ["controllers/api/v1/"],
+            "": ["controllers/", "middlewares/", "services/"]
         }
     },
     "config": {

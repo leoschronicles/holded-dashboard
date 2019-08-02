@@ -1,22 +1,29 @@
 <?php
 
 use Slim\App;
-use Slim\Http\Request;
-use Slim\Http\Response;
 
 return function (App $app) {
     $container = $app->getContainer();
 
-    // Authenticated routes
-    $app->group('', function() {
-        $this->get('/account/signout', 'AuthController:getLogOut')->setName('auth.logout');
-        $this->get('/account/password/change', 'PasswordController:getChangePassword')->setName('auth.password.change');
-    }); //->add(new AuthMiddleware($container));
+    // Dashboard
+    $app->group('/dashboard', function() {
+        $this->get('', 'DashboardController:index')->setName('dashboard.index');
+    })->add(new AuthMiddleware($container));
+
+    // API (DASHBOARD)
+    $app->group('/api/v1/dashboard', function() {
+        $this->get('', "\\Api\\v1\\DashboardController:index");
+        $this->put('', "\\Api\\v1\\DashboardController:update");
+    })->add(new AuthMiddleware($container));
 
     // Guest routes
     $app->group('', function(){
-        $this->get('/[{name}]', 'HomeController:index')->setName('home');
-        $this->post('/account/login', 'AuthController:postLogIn')->setName('auth.login');
-        $this->get('/account/signin', 'AuthController:getSignIn')->setName('auth.signin');
+        $this->get('/', 'HomeController:index')->setName('home');
+        
+        $this->post('/account/signin', 'AuthController:login')->setName('auth.login');
+        $this->post('/account/signup', 'AuthController:register')->setName('auth.register');
+
+        $this->get('/account/signin', 'AuthController:signIn')->setName('auth.signin');
+        $this->get('/account/signup', 'AuthController:signUp')->setName('auth.signup');
     });
 };

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Holded - Sign in</title>
+        <meta charset="utf-8"/>
+        <?php $helper->loadPartial('header'); ?>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/> <!-- 'monolith' theme -->
+        <link rel="stylesheet" href="/assets/css/dashboard.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+        <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.js'></script>
+        <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.jQueryUI.min.js'></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+        
+        <script src="/assets/js/dashboard.js"></script>
+    </head>
+    <body data-page-name='dashboard:index' class="dashboard">
+        <div class="container">
+            <?php $helper->loadPartial('flash_messages', [ 'flash' => $flash]); ?>
+            <?php $helper->loadPartial('navbar', ['user' => $user]); ?>
+            <?php $helper->loadPartial('dashboard_grid'); ?>
+            <!-- [BEG] widget Modal -->
+            <div id="modal-widget" class="modal">
+                <div class="modal-content">
+                    <h1 class="modal-header">WIDGET</h1>
+                    <div class="field">
+                        <input type="text" placeholder="name your widget..." name="title" />
+                    </div>
+                    <div class="field">
+                        <label for="bg-color">Background</label>
+                        <input class="color-picker" type="text" name="bg-color" />
+                    </div>
+                    <div class="actions">
+                        <button class="action create-btn">Create</button>
+                        <button class="action edit-btn">Edit</button>
+                        <button class="action delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <!-- [END] widget Modal -->
+        </div>
+    </body>
+</html>

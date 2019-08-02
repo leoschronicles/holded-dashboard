@@ -3,9 +3,10 @@ use \Holded\BaseController;
 
 class DashboardController extends BaseController
 {
+  /**
+   * Pages
+   */
   public function index($request, $response, $args) {
-    $container = $this->container;
-
-    return $container->get('renderer')->render($response, 'index.phtml', $args);
+    return $this->renderer->render($response, 'dashboard.phtml', $this->templateArgs($args));
   }
 }

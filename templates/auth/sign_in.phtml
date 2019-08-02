@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Holded - Sign in</title>
+        <meta charset="utf-8"/>
+        <?php $helper->loadPartial('header'); ?>
+        <link rel="stylesheet" href="/assets/css/auth.css">
+        <script src="/assets/js/auth.js"></script>
+    </head>
+    <body data-page-name='auth:signin' class="auth signin">
+        <div class="container">
+            <?php $helper->loadPartial('flash_messages', [ 'flash' => $flash]); ?>
+            <form class="auth-box" method="post" action="/account/signin">
+                <div class="field">
+                    <input type="text" placeholder="username" name="username" />
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="password" name="password" />
+                </div>
+                <div class="actions">
+                    <input type="submit" value="LOGIN">
+                    <div class="not-registered-block">
+                        Not registered? <a href="/account/signup" class="btn">Create an account</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

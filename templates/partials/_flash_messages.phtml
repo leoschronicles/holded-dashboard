@@ -1,0 +1,9 @@
+<?php
+$messages = $flash->getMessages();
+echo "<div class='flash-messages-hidden' style='display:none'>";
+foreach($messages as $msgType => $msgList):
+    foreach($msgList as $msg):
+        echo "<div data-key='$msgType'>$msg</div>";
+    endforeach;
+endforeach;
+echo "</div>\n";

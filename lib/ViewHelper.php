@@ -12,11 +12,16 @@ class ViewHelper{
         $this->root = $this->container['project_root'];
     }
 
-    public function loadPartial($path){
+    public function loadPartial($path, $params){
         $fullpath = $this->root . "/templates/partials/_$path.phtml";
         if(!file_exists($fullpath)){
             throw new PartialNotFoundError("Partial view at '$fullpath' not found");
         }
-        require $fullpath;
+        $this->protectedIncludeScope($fullpath, $params);
+    }
+
+    protected function protectedIncludeScope ($template, $data) {
+        extract($data);
+        include $template;
     }
 }
