@@ -1,27 +1,37 @@
-# Slim Framework 3 Skeleton Application
+# Holded Dashboard
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+This sample project was developed to be a quick demo of implementing a Dashboard
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+## Tech stack
+* PHP 7
+* Slim
+* Javascript
+* jQuery
+* MongoDB
+
+## Features
+* Authentication system (Signin + Signup)
+* Dashboard
+  * Grid system (implemented via 3rd party library [gridstack.js](http://gridstackjs.com/)
+  * Widgets (CRUD)
+    * Title
+	* Background color
+
+## TODO
+Here I list a series of things that should be done if this were a serious project (i.e not a demo)
+* Make it fully responsive
+* Improve UI
+* Unit testing
+* Use Module Bundler for the frontend assets (e.g. Webpack)
+* Use Sass to improve code quality and modularity regarding styles
+* Add data validations
 
 ## Install the Application
+Make sure you have installed all dependencies required in this project beforehand.
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+Run:
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
-
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
-
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
-
-To run the application in development, you can run these commands 
-
-	cd [my-app-name]
-	php composer.phar start
-
-Run this command in the application directory to run the test suite
-
-	php composer.phar test
-
-That's it! Now go build something cool.
+```bash
+$ composer install
+$ php -S 0.0.0.0:8080
+```
