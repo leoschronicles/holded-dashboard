@@ -13,7 +13,8 @@ class BaseController{
         return array_merge($arg1, [
             "container" => $this->container,
             "helper"    => new ViewHelper($this->container),
-            "flash"     => $this->container->flash
+            "flash"     => $this->container->flash,
+            "user"      => $this->auth->user
         ]);
     }
     

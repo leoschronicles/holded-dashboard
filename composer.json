@@ -30,6 +30,7 @@
     "autoload": {
         "psr-4": {
             "Holded\\": ["lib/"],
+            "Api\\v1\\": ["controllers/api/v1/"],
             "": ["controllers/", "middlewares/", "services/"]
         }
     },

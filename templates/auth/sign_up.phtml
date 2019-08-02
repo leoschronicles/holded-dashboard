@@ -4,26 +4,30 @@
         <title>Holded - Sign up</title>
         <meta charset="utf-8"/>
         <?php $helper->loadPartial('header'); ?>
+        <link rel="stylesheet" href="/assets/css/auth.css">
+        <script src="/assets/js/auth.js"></script>
     </head>
-    <body data-page-name='auth:signup'>
+    <body data-page-name='auth:signup' class="auth signup">
         <div class="container">
             <?php $helper->loadPartial('flash_messages', [ 'flash' => $flash]); ?>
-            <h1>Sign Up</h1>
-            <form method="post" action="/account/signup">
+            <form class="auth-box" method="post" action="/account/signup">
                 <div class="field">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" />
+                    <input type="text" placeholder="name" name="name" />
                 </div>
                 <div class="field">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" />
+                    <input type="text" placeholder="username" name="username" />
                 </div>
                 <div class="field">
-                    <label for="password">Confirmación de password</label>
-                    <input type="password" name="password-confirmation" />
+                    <input type="password" placeholder="password" name="password" />
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="confirm" name="password-confirmation" />
                 </div>
                 <div class="actions">
-                    <input type="submit" value="Empezar Ya">
+                    <input type="submit" value="Create account">
+                    <div class="registered-block">
+                        Already a user? <a href="/account/signin" class="btn">Sign in</a>
+                    </div>
                 </div>
             </form>
         </div>

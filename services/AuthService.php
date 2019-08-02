@@ -35,6 +35,7 @@ class AuthService{
 
     public function createUser($userFields){
         return $this->model->insertOne([
+            'name'     => $userFields['name'],
             'username' => $userFields['username'],
             'password' => sha1($userFields['password'])
         ]);

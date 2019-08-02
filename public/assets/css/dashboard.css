@@ -1,0 +1,118 @@
+.grid-stack{
+    background: white;
+    
+}
+.grid-stack-item-content{
+    color: white;
+    text-align: center;
+}
+
+.main-nav{
+    background: #4e92ee;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:5px 0px;
+}
+
+.main-nav .name-text{
+    color: white;    
+}
+
+.main-nav .logo{
+    max-height: 40px;
+    max-width: 100%;
+}
+
+.main-nav .nav-action a{
+    display: inline-block;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: white;
+}
+
+.grid-stack-item-content .edit-item-action{
+    opacity:0;
+    transition: opacity .1s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.grid-stack-item-content .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-stack-item-content:hover .edit-item-action{
+    opacity:1;
+}
+
+#modal-widget.modal{
+    border-radius: 0;
+    text-align: center;
+    padding:0;
+}
+
+#modal-widget.modal .field label[for='bg-color']{
+    margin-right: 10px;
+}
+
+#modal-widget.modal .pickr{
+    display: inline-block;
+}
+#modal-widget.modal .field input{
+    background: #F1F3F2;
+    color: black;
+    padding:12px 20px;
+    border:none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+#modal-widget.modal .field input::placeholder{
+    color: #CACCCB;
+}
+
+
+#modal-widget.modal .modal-content .modal-header{
+    padding: 15px 0px;
+    font-size:20px;
+    position: relative;
+    top:0;
+    left:0;
+    color: white;
+    background: #4e92ee;
+    box-shadow: inset 6px 7px 32px -11px rgba(0,0,0,0.4);
+}
+#modal-widget.modal .modal-content > *{
+    margin-bottom:25px;
+}
+#modal-widget.modal .modal-content .actions{
+    padding-top:10px;
+    border-top: 1px solid #E8E8E8;
+}
+#modal-widget.modal .modal-content .action{
+    max-width:100px;
+}
+#modal-widget.modal .action.create-btn,
+#modal-widget.modal .action.edit-btn,
+#modal-widget.modal .action.delete-btn{
+    font-family: Poppins, sans-serif;
+    background: #00B143;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+    width:100%;
+    border:none;
+    padding:10px;
+}

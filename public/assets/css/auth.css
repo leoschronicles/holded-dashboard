@@ -1,0 +1,89 @@
+/**********
+* Sign in *
+***********/
+html, body{
+    height: 100%;
+}
+.auth .container{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth .container.bg1{
+    background: rgb(118,194,91);
+    background: radial-gradient(circle, rgba(118,194,91,1) 35%, rgba(101,189,68,1) 100%);
+}
+
+.auth .container.bg2{
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+}
+
+.auth .container.bg3{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+.auth .container.bg4{
+    background-color: #FEE140;
+    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+    
+}
+
+.auth .auth-box{
+    display: inline-block;
+    background: white;
+    padding:50px;
+}
+
+.auth .auth-box{
+    -webkit-box-shadow: 6px 9px 8px -6px rgba(0,0,0,0.52);
+    -moz-box-shadow: 6px 9px 8px -6px rgba(0,0,0,0.52);
+    box-shadow: 6px 9px 8px -6px rgba(0,0,0,0.52);
+    font-size: 16px;
+}
+
+.auth .auth-box input{
+    padding:12px 20px;
+    margin-bottom:10px;
+    border:none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.auth .auth-box input[type='text'],
+.auth .auth-box input[type='password']{
+    background: #F1F3F2;
+}
+
+.auth .auth-box input[type='text']::placeholder,
+.auth .auth-box input[type='password']::placeholder{
+    color: #CACCCB;
+}
+
+.auth .auth-box a.btn{
+    text-decoration: none;
+    color: #76c25b;
+}
+
+.auth .auth-box .actions input{
+    background: #00B143;
+    font-weight: 300;
+    color: white;
+    width:100%;
+}
+
+.auth .auth-box .not-registered-block,
+.auth .auth-box .registered-block{
+    color: grey;
+    font-size: 12px;
+    text-align: center;
+}
+
+/**********
+* Sign up *
+***********/
