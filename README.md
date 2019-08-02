@@ -12,7 +12,7 @@ This sample project was developed to be a quick demo of implementing a Dashboard
 ## Features
 * Authentication system (Signin + Signup)
 * Dashboard
-  * Grid system (implemented via 3rd party library [gridstack.js](http://gridstackjs.com/))
+  * Grid system (implemented via 3rd party library [gridstack.js](http://gridstackjs.com/)), the same [Holded](https://www.holded.com/) uses in Production.
   * Widgets (CRUD)
     * Title
 	* Background color
